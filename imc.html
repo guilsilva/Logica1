@@ -1,0 +1,34 @@
+<meta charset="utf-8">
+
+<script type="text/javascript">
+	
+	function pulaLinha(){
+		document.write("<br><br>");
+	}
+
+	function mostra(frase){
+		document.write(frase);
+		pulaLinha();
+	}
+
+	function imc(peso, altura){
+		return peso / (altura * altura);
+	}
+
+	var nome = prompt("Digite seu nome");
+
+	var pesoInformado = prompt(nome + ", infome seu peso");
+	
+	var alturaInformada = prompt(nome + ", infome sua altura");
+
+	mostra(nome + " seu imc é " + imc(pesoInformado, alturaInformada));
+
+	if (imc < 18.5) {
+		mostra("oi");
+	}else if (imc > 35) {
+		mostra("ola");
+	}else{
+		mostra("Hello");
+	}
+
+</script>

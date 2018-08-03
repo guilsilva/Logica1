@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+
+<h1>Receitas do Yan</h1>
+
+<script>
+
+	function preenche(quantidade){
+		var ingredientes = [];  
+		var contador = 1;
+
+	    while(contador <= quantidade) {
+	        var achou = false; 
+	        var ingrediente = prompt("Informe o ingrediente " + contador);
+	        for(var i = 0; i < ingredientes.length; i++){
+	        	if(ingrediente == ingredientes[i]){
+	        		achou = true;
+	        		break;
+	        	}
+	        }
+	        if(achou == false){
+	        	ingredientes.push(ingrediente);
+	        	contador++;
+	        }
+	    }
+	    return ingredientes;
+	}
+
+    var ingredientes = [];
+
+    var quantidade = parseInt(prompt("Quantos ingredientes você vai adicionar?"));
+
+    ingredientes = preenche(quantidade);
+
+    console.log(ingredientes);
+</script>
